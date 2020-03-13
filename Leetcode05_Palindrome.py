@@ -24,7 +24,7 @@ class Solution(object):
         :rtype: bool
         """
 
-        # method 2 (better than 33.48%)
+        # method 2 (better than 42.26%)
         if x<0:
             return False
         elif x<10:
@@ -32,7 +32,7 @@ class Solution(object):
         else:
             l=list(str(x))
             lr=l[::-1]
-            if (x-int("".join(lr))) != 0:
+            if l != lr:
                 return False
             else:
                 return True
