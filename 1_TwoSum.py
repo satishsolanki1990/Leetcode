@@ -20,7 +20,7 @@ from collections import defaultdict
 
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums, target):
         '''
         logic: for nums[i], if target-nums[i] in nums-> return indexes
 
