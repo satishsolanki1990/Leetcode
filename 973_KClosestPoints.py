@@ -38,7 +38,6 @@ class Solution:
         # It's interesting!! Will have to do a deeper analysis 
         # yeahh. It is . 
 
-
         """
         Runtime: 672 ms, faster than 66.22% of Python3 online submissions for K Closest Points to Origin.
         Memory Usage: 20 MB, less than 44.17% of Python3 online submissions for K Closest Points to Origin.
