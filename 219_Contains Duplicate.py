@@ -19,14 +19,10 @@ class Solution:
         hashmap = {}
 
         for index, value in enumerate(nums):
-            if not value in hashmap:
-                hashmap[value] = index
-            else:
+            if value in hashmap:
                 if index - hashmap[value] <= k:
                     return True
-                else:
-                    hashmap[value] = index
-
+            hashmap[value] = index
         return False
 
 
