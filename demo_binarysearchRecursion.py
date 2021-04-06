@@ -4,15 +4,23 @@ recursive binary search
 
 def binarysearch(arr,target):
 
+    mid = 0
     def helper(l,r):
-        l = 0
-        r = len(arr)
+        if l>r:
+            return -1
+        nonlocal mid, target
         mid= l + (r-l)//2
         if arr[mid] == target:
-            return True
+            return mid
         elif arr[mid]>target:
-            helper(mid+1,r)
+            return helper(l,mid-1)
         else:
-            helper(l,mid-1)
+            return helper(mid+1,r)
 
+    return helper(0, len(arr))
+
+arr= [1,2,4,5,7,8,9]
+target=4
+
+print(binarysearch(arr,target))
 
