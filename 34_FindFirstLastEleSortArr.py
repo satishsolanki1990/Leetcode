@@ -21,7 +21,7 @@ Output: [-1,-1]
 '''
 
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums, target):
         # find target
         l = 0
         r = len(nums) - 1
@@ -33,10 +33,13 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid - 1
+
         if l > r: return [-1, -1]
+
         # at this point, we have l,r, and mid
         mid_r = mid  # use in first occurance seach
         mid_l = mid  # use in last occurance search
+
         # search for first occurance
         while (l <= mid_r):
             if nums[l] == target:
