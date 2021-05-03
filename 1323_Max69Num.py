@@ -43,4 +43,5 @@ class Solution:
 #             num %=(10**i)
 
 #         return ans
-
+# #ANOTHER METHOD:
+#         return int(str(num).replace('6', '9', 1))
