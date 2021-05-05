@@ -28,14 +28,14 @@ class Solution(object):
         :rtype: int
         """
         ans=0
-        left=0
+        l_ptr=0 # left ptr
         used=defaultdict(int)
-        for right,val in enumerate(s):
-            if val in used and left <= used[val]:
+        for r_ptr,val in enumerate(s):
+            if val in used and l_ptr <= used[val]:
                 left = used[val]+1
             else:
-                ans = max(ans,right-left+1)
-            used[val]=right
+                ans = max(ans,r_ptr-l_ptr+1)
+            used[val]=r_ptr
         return ans
 
 
