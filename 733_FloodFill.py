@@ -19,9 +19,6 @@ to the starting pixel.
 
 '''
 
-# TODO : redo this . DFS problem
-# TODO : 463. Island Perimeter (https://leetcode.com/problems/island-perimeter/)
-
 class Solution:
     def floodFill(self, image, sr, sc, newColor):
 
