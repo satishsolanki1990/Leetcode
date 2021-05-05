@@ -45,12 +45,11 @@ class Solution:
 
 # method-2 : find pivot and then apply binary search
 class Solution:
-    # TODO : working on this
     def search(self, nums: List[int], target: int) -> int:
         # find pivot
         left = 0
         right = len(nums) - 1
-
+        pivot = 0
         while (left <= right):
             pivot = left + (right - left) // 2
             if pivot + 1 < len(nums) and nums[pivot] > nums[pivot + 1]:
@@ -63,7 +62,7 @@ class Solution:
             else:
                 left = pivot + 1
 
-        if target > pivot:
+        if target >= nums[0] and target <= nums[pivot - 1]:
             # target is in left sorted region
             left = 0
             right = pivot
@@ -93,5 +92,3 @@ class Solution:
                     right = mid - 1
 
         return -1
-
-
